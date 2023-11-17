@@ -118,3 +118,81 @@ let height = 1.7;
 let BMI = weight / (height * height);
 console.log(BMI);
  
+//インクリメント デクリメント(1加算/減算)　繰り返し処理で使用する事が多い
+let num6 = 10;
+num6++;
+console.log(num6);
+num6--;
+console.log(num6);
+//前置演算子のインクリメント　デクリメント
+++num6;
+console.log(num6);
+--num6;
+console.log(num6);
+
+let num7 = 10;
+let num8 = 10;
+let ans12 = ++num7;//前置演算子 インクリメント後に代入
+let ans13 = num8++;//後置演算子 代入後にインクリメント
+console.log(ans12);
+console.log(ans13);
+//結果が変わるので注意
+
+//条件分岐
+let temperature = 29;
+if (temperature > 28) {
+    console.log('冷房稼働');
+}
+
+console.log(29 > 28);
+console.log(29 < 28);
+//以上
+let a = 100;
+if (a >= 100) {
+    console.log('100以上');
+}
+//より大きい
+let b = 101;
+if (b > 100) {
+    console.log('100より大きい');
+}
+//以下
+let c = 100;
+if (c <= 100) {
+    console.log('100以下');
+}
+//未満
+let d = 99;
+if (d < 100) {
+    console.log('100未満');
+}
+//等しい
+let e = 100;
+if (e == 100) {
+    console.log('100と等しい');
+}
+//等しくない
+let f = 111;
+if (f != 100) {
+    console.log('100と等しくない');
+}
+
+//if / else
+let g = 101;
+if (g >= 100) {
+    console.log('100以上');
+} else {
+    console.log('100以上ではない');
+}
+
+//より複雑な条件分岐 else if
+let score = 70;
+if (score >= 90) {
+    console.log('A');
+} else if (score >= 80) {
+    console.log('B');
+} else if (score >= 60) {
+    console.log('C');
+} else {
+    console.log('D');
+}
