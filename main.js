@@ -79,3 +79,42 @@ let ans10 = l + m * n;
 console.log(ans10);
 let ans11 = (l + m) * n;
 console.log(ans11);
+
+//文字列月合とテンプレートリテラル
+let lastName = 'のと';
+let firstName = 'やすひこ';
+let message1 = 'こんにちは ' + lastName + ' ' + firstName + ' さん';
+console.log(message1);
+//``で区切ることでテンプレートリテラルを使用できる
+//${}を使用すると文章の中に変数の値を利用することができる　改行も可能
+let message2 = `こんにちは ${lastName} ${firstName} さん
+JavaScriptの学習を始めましょう`; 
+console.log(message2);
+
+//複合代入演算子
+let num1 = 20;
+num1 = num1 + 10;
+console.log(num1);
+
+let num2 = 20;
+num2 += 10;
+console.log(num2);
+
+let num3 = 20;
+num3 -= 10;
+console.log(num3);
+
+let num4 = 20;
+num4 *= 10;
+console.log(num4);
+
+let num5 = 20;
+num5 /= 10;
+console.log(num5);
+
+//演習問題：演算子
+let weight = 60;
+let height = 1.7;
+let BMI = weight / (height * height);
+console.log(BMI);
+ 
