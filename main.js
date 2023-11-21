@@ -196,3 +196,86 @@ if (score >= 90) {
 } else {
     console.log('D');
 }
+
+//型変換
+let birthYear = '2000';
+let age = 18;
+console.log(birthYear + age);
+console.log(age + birthYear);
+console.log(Number(birthYear) + age);//Number()の中に入れた変数を数値型に変換する
+console.log(Number('Noto'));//数値型に変換できない場合はNaNを返す※Not a Number
+console.log(String(age) + '歳');//String()で文字列変換
+
+//boolean型 論理値型 true/false
+let bo = true;
+if(bo){
+    console.log('はい');
+} else {
+    console.log('いいえ');
+}
+console.log(!bo);//boolean型変数の前に!をつけると論理反転が行われる
+
+//比較演算子 == と === の違い
+let num9 = 100;
+let str = '100';
+if(num9 == str) {
+    console.log('同じ');
+} else {
+    console.log('同じではない')
+}
+if(num9 === str) {
+    console.log('同じ');
+} else {
+    console.log('同じではない')
+}
+// == は型の違いを問わない（厳密には、判定時に型変換が行われている）
+// === は型の違いも判定する 基本はこちらを使用することでバグを防ぐ
+
+//演習問題:条件分岐
+let weight2 = 60;
+let height2 = 1.7;
+let BMI2 = weight2 / (height2 * height2);
+console.log(BMI2);
+if(BMI2 >= 25) {
+    console.log('肥満');
+} else if(BMI2 >= 18.5) {
+    console.log('普通');
+} else {
+    console.log('痩せ');
+}
+
+//論理演算子 && || !
+// && 論理AND 両方trueの場合trueを返す
+console.log(true && true);
+console.log(true && false);
+console.log(true && false);
+console.log(false && false);
+// || 論理OR どちらか一方がtrueの場合trueを返す
+console.log(true || true);
+console.log(true || false);
+console.log(true || false);
+console.log(false || false);
+// ! 論理NOT 論理値を反転させる
+console.log(!true);
+console.log(!false);
+// ! > && > ||　の順で優先される ()でかこった場合はそちらが優先される
+console.log(false && true || true);
+console.log(false && (true || true));
+let hasDriversLicense = true;
+let hasGoldLicense = true;
+if(hasDriversLicense && hasGoldLicense) {
+    console.log('あなたは優良ドライバーです');
+}
+
+//条件分岐の入れ子
+let num10 = 6;
+if(num10 % 2 === 0) {
+    if(num10 %3 === 0) {
+        console.log(`${num10}は、2の倍数、かつ、3の倍数です`);//テンプレートリテラル
+    }
+}
+//論理演算子&&を使用する場合
+let num11 = 6;
+if((num11 % 2 === 0) && (num11 % 3 === 0)) {
+    console.log(`${num11}は、2の倍数、かつ、3の倍数です`);
+}
