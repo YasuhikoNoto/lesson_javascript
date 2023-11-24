@@ -279,3 +279,54 @@ let num11 = 6;
 if((num11 % 2 === 0) && (num11 % 3 === 0)) {
     console.log(`${num11}は、2の倍数、かつ、3の倍数です`);
 }
+
+//条件構文switch
+let num12 = 1;
+switch(num12) {
+    case 1:
+        console.log('金賞');
+        break;
+    case 2:
+        console.log('銀賞');
+        break;
+    case 3:
+        console.log('銅賞');
+        break;
+    case 4:
+        console.log('4位');
+        break;
+    case 5:
+        console.log('5位');
+        break;
+    default:
+        console.log('選外');
+        break;
+}
+//break により構文から脱出する　あえてbreakを省くことも仕様上は可能だが、バグの原因となるためやるべきでない
+//上記の場合if文でも記述可能 好みや思想による
+
+　
+//演習switch
+let num13 = Math.floor(Math.random() * 5 + 1);
+//Math.random は0以上1未満のランダム数値を返す
+//範囲指定の為には  Math.random() * (max - min + 1) + min;
+switch(num13) {
+    case 1:
+        console.log('大吉');
+        break;
+    case 2:
+        console.log('中吉');
+        break;
+    case 3:
+        console.log('小吉');
+        break;
+    case 4:
+        console.log('吉');
+        break;
+    case 5:
+        console.log('凶');
+        break;
+    default:
+        console.log('想定外の数値です。');
+        break;
+}
