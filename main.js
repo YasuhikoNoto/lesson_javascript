@@ -330,3 +330,22 @@ switch(num13) {
         console.log('想定外の数値です。');
         break;
 }
+
+//nullとundefined
+let undef;
+console.log(undef);
+let item = null;
+console.log(item);
+if(undef === undefined) {
+    console.log('undefinedです');
+}
+if(item === null) {
+    console.log('nullです');
+}
+
+//三項演算子
+//条件式 ? trueの場合 : falseの場合
+let age2 = 20;
+let beverage = (age2 >= 20) ? 'ビール' : 'コーラ';
+console.log(beverage);
+//三項演算子を利用して簡潔なコードを書ける場合は効果的　無理に使うべきではないもの
